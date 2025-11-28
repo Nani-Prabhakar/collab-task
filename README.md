@@ -1,53 +1,58 @@
-# Collaborative Task Manager 🚀
+# Collaborative Task Manager
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![React](https://img.shields.io/badge/React-18.2-blue.svg)](https://reactjs.org/)
-[![Node.js](https://img.shields.io/badge/Node-18-green.svg)](https://nodejs.org/)
-[![MongoDB](https://img.shields.io/badge/MongoDB-7.0-brightgreen.svg)](https://www.mongodb.com/)
-[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.3-purple.svg)](https://tailwindcss.com/)
-
-## 📖 Overview
-
-**Collaborative Task Manager** is a full-stack web application built for team task management with role-based authentication. Managers can create, assign, edit, and delete tasks while regular users can view assigned tasks and update their status.
-
-> **Live Demo**: https://collab-task-manager.vercel.app
+## Project Summary  
+Collaborative Task Manager is a full-stack web application for effective team task coordination. It supports user authentication, role-based access (managers and users), task creation/assignment/editing, status tracking, and a dashboard overview. The frontend is built with React and Zustand, while the backend uses Node.js, Express, and MongoDB.
 
 ---
 
-## ✨ Features
-
-- 🔐 **JWT Authentication** — Secure login/register with token persistence  
-- 🎭 **Role-Based Access Control** — Manager vs User permissions  
-- 📝 **Full Task CRUD** — Create, Read, Update, Delete  
-- 📊 **Smart Dashboard** — Task analytics & personal task views  
-- 📱 **Responsive UI** — Built with Tailwind + mobile-first layout  
-- 🔄 **Real-time Updates** — Auto-refresh every 30 seconds  
-- ⚡ **High Performance** — Vite + optimized API calls  
+## Tech Stack  
+- **Frontend:** React 18, Zustand, React Router, Tailwind CSS, Vite  
+- **Backend:** Node.js, Express.js, Mongoose  
+- **Database:** MongoDB (local or Atlas)  
+- **Authentication:** JWT tokens  
 
 ---
 
-## 🛠 Tech Stack
 
-| Category | Technology |
-|----------|------------|
-| **Frontend** | React 18, Vite, Tailwind CSS, React Router, Zustand |
-| **Backend** | Node.js, Express.js, Mongoose |
-| **Database** | MongoDB (Local/Atlas) |
-| **Auth** | JWT Tokens |
-| **Deployment** | Vercel / Railway / Render |
+## Setup Instructions
+
+### Backend Setup
+cd backend
+npm install
+cp .env.example .env
+
+**Edit .env and add your MongoDB URI and JWT secret**
+npm run dev
+
+### Frontend Setup
+
+cd ../frontend
+npm install
+npm run dev
+
+
+### Environment Variables
+
+#### Backend `.env`
+
+MONGO_URI=mongodb://localhost:27017/collab_task_manager
+
+or **your MongoDB Atlas connection string**
+
+JWT_SECRET=your-secure-jwt-secret-key
+PORT=5000
 
 ---
 
-## FRONT-END SETUP
-   cd front-end/
-   npm install
-   npm run dev
+## How to Run the Project
 
+1. Start MongoDB (local or Atlas)
+2. Run backend:  
+cd backend
+npm run dev
+3. Run frontend:  
+cd frontend
+npm run dev
 
-## BACK-END SETUP 
-   cd back-end 
-   npm install
-   npm run dev
-## .env
-   MONGOURI=
-   M
+ 
+
