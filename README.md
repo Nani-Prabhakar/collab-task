@@ -1,51 +1,42 @@
+# Collaborative Task Manager 🚀
 
-## 📖 Usage
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![React](https://img.shields.io/badge/React-18.2-blue.svg)](https://reactjs.org/)
+[![Node.js](https://img.shields.io/badge/Node-18-green.svg)](https://nodejs.org/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-7.0-brightgreen.svg)](https://www.mongodb.com/)
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.3-purple.svg)](https://tailwindcss.com/)
 
-1. **Register** as Manager or User
-2. **Login** to access dashboard
-3. **Dashboard** shows:
-   - Task statistics (total, completed, pending)
-   - Tasks assigned to you
-   - Tasks you created (Managers only)
-4. **Create Tasks** (Managers):
-   - Fill form with title, description, due date, user ID
-   - Assign to any registered user by their `_id`
-5. **Manage Tasks**:
-   - Edit/Delete (Managers only)
-   - Mark Complete/Pending (Assignees + Managers)
+## 📖 Overview
 
-## 🖥 Screenshots
+**Collaborative Task Manager** is a full-stack web application built for team task management with role-based authentication. Managers can create, assign, edit, and delete tasks while regular users can view assigned tasks and update their status.
 
-### Dashboard
-![Dashboard](screenshots/dashboard.png)
+> **Live Demo**: https://collab-task-manager.vercel.app
 
-### Task Management
-![Tasks](screenshots/tasks.png)
+---
 
-### Login Page
-![Login](screenshots/login.png)
+## ✨ Features
 
-*(Add actual screenshots to `/screenshots/` folder)*
+- 🔐 **JWT Authentication** — Secure login/register with token persistence  
+- 🎭 **Role-Based Access Control** — Manager vs User permissions  
+- 📝 **Full Task CRUD** — Create, Read, Update, Delete  
+- 📊 **Smart Dashboard** — Task analytics & personal task views  
+- 📱 **Responsive UI** — Built with Tailwind + mobile-first layout  
+- 🔄 **Real-time Updates** — Auto-refresh every 30 seconds  
+- ⚡ **High Performance** — Vite + optimized API calls  
 
-## 📋 API Endpoints
+---
 
-| Method | Endpoint | Description | Auth |
-|--------|----------|-------------|------|
-| POST | `/api/auth/register` | Register new user | No |
-| POST | `/api/auth/login` | Login user | No |
-| GET | `/api/tasks` | Get all tasks | Yes |
-| POST | `/api/tasks` | Create task | Yes |
-| PUT | `/api/tasks/:id` | Update task | Yes |
-| DELETE | `/api/tasks/:id` | Delete task | Yes |
+## 🛠 Tech Stack
 
-## 🔍 Troubleshooting
+| Category | Technology |
+|----------|------------|
+| **Frontend** | React 18, Vite, Tailwind CSS, React Router, Zustand |
+| **Backend** | Node.js, Express.js, Mongoose |
+| **Database** | MongoDB (Local/Atlas) |
+| **Auth** | JWT Tokens |
+| **Deployment** | Vercel / Railway / Render |
 
-| Issue | Solution |
-|-------|----------|
-| MongoDB timeout | Start MongoDB service or use Atlas |
-| `useAuthStore.getState` error | Check `src/utils/api.js` import |
-| CORS errors | Backend CORS middleware configured |
-| JWT invalid | Check `JWT_SECRET` in `.env` |
+---
 
-## 🧪 Testing
+## 📁 Project Structure
 
