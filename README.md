@@ -1,164 +1,129 @@
-```markdown
-# Collaborative Task Manager
 
-<div align="center">
+# 🚀 Collaborative Task Manager
 
-[![React](https://img.shields.io/badge/React-18-blue?style=for-the-badge&logo=react)](https://reactjs.org/)
-[![Node.js](https://img.shields.io/badge/Node.js-20-green?style=for-the-badge&logo=node.js)](https://nodejs.org/)
-[![MongoDB](https://img.shields.io/badge/MongoDB-7.0-green?style=for-the-badge&logo=mongodb)](https://mongodb.com/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-blue?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+A full-stack web application designed for efficient **team task coordination**, featuring authentication, role-based access, task creation/assignment, and real-time status tracking.  
+This project aims to simplify team workflows by providing an intuitive dashboard and seamless task management experience.
 
-</div>
+---
 
-## 🚀 Project Overview
+## 📌 Features
 
-**Collaborative Task Manager** is a modern full-stack web application designed for seamless team task coordination. It provides user authentication, role-based access control (Managers & Users), task creation/assignment/editing, real-time status tracking, and an intuitive dashboard for project oversight. [web:5][web:10][memory:1]
+- 🔐 **User Authentication (JWT)**
+- 🧑‍💼 **Role-Based Access Control** (Manager & User)
+- 📝 **Task Creation, Assignment & Editing**
+- 📊 **Dashboard Overview**
+- 🔄 **Real-time Task Status Updates**
+- 🎨 **Modern & Responsive UI (React + Tailwind CSS)**
 
-Built with cutting-edge technologies, this app ensures scalability, security, and exceptional user experience for teams of all sizes.
+---
 
 ## 🛠️ Tech Stack
 
-| Frontend | Backend | Database | Authentication |
-|----------|---------|----------|----------------|
-| React 18 | Node.js | MongoDB | JWT Tokens |
-| Zustand | Express.js | Mongoose | bcryptjs |
-| React Router | | Atlas/Local |  |
-| Tailwind CSS | | |  |
-| Vite | | |  | [web:13][web:16]
+### **Frontend**
+- React 18  
+- Zustand (State Management)  
+- React Router  
+- Tailwind CSS  
+- Vite  
 
-## ✨ Features
+### **Backend**
+- Node.js  
+- Express.js  
+- MongoDB + Mongoose  
+- JWT Authentication  
 
-- 🔐 Secure user authentication & authorization
-- 👥 Role-based access (Managers/Users)
-- 📝 Task CRUD operations with assignment
-- 📊 Real-time dashboard analytics
-- ⚡ Fast development with Vite & Nodemon
-- 🛡️ Production-ready security (Helmet, Rate Limiting)
-- 📱 Responsive design with Tailwind CSS [memory:1][memory:2]
+---
 
-## 🚀 Quick Start
-
-### Prerequisites
-- Node.js 18+ [web:10]
-- MongoDB (Local or Atlas)
-- Git
-
-### 1. Clone & Install
+## 📦 Project Structure
 
 ```
-git clone <your-repo-url>
-cd collaborative-task-manager
-```
 
-### 2. Backend Setup
+/project-root
+│── backend/
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── config/
+│   ├── .env.example
+│   └── server.js
+│
+└── frontend/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── store/
+│   └── App.jsx
+└── vite.config.js
 
-```
+````
+
+---
+
+## ⚙️ Backend Setup
+
+```bash
 cd backend
 npm install
-cp .env.example .env
-```
 
-**Update `.env`:**
+# Copy environment template
+cp .env.example .env
+````
+
+Edit `.env` and add:
+
 ```
 MONGO_URI=mongodb://localhost:27017/collab_task_manager
 # or your MongoDB Atlas URI
-JWT_SECRET=your-super-secure-jwt-secret-here
+
+JWT_SECRET=your-secure-jwt-secret-key
 PORT=5000
 ```
 
-```
+Start backend:
+
+```bash
 npm run dev
 ```
-*Backend runs on http://localhost:5000*
 
-### 3. Frontend Setup
+---
 
-```
+## 🎨 Frontend Setup
+
+```bash
 cd ../frontend
 npm install
 npm run dev
 ```
-*Frontend runs on http://localhost:5173*
-
-## 📁 Project Structure
-
-```
-collaborative-task-manager/
-├── backend/
-│   ├── models/
-│   ├── routes/
-│   ├── middleware/
-│   ├── .env.example
-│   └── package.json
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── stores/
-│   │   ├── pages/
-│   │   └── App.jsx
-│   ├── .env.example
-│   └── package.json
-└── README.md
-```
-
-## 🔧 Available Scripts
-
-| Command | Location | Description |
-|---------|----------|-------------|
-| `npm run dev` | Backend | Start with Nodemon |
-| `npm run dev` | Frontend | Vite dev server |
-| `npm run build` | Frontend | Production build |
-| `npm run lint` | Both | Code quality check | [web:10]
-
-## 🌐 Environment Variables
-
-### Backend `.env.example`
-```
-MONGO_URI=mongodb://localhost:27017/collab_task_manager
-JWT_SECRET=your-super-secure-random-jwt-secret
-PORT=5000
-NODE_ENV=development
-```
-
-### Frontend `.env.example`
-```
-VITE_API_URL=http://localhost:5000/api
-VITE_APP_NAME="Collaborative Task Manager"
-```
-
-## 📚 API Endpoints
-
-| Method | Endpoint | Description | Auth |
-|--------|----------|-------------|------|
-| POST | `/api/auth/register` | User registration | No |
-| POST | `/api/auth/login` | User login | No |
-| GET | `/api/tasks` | Get all tasks | Yes |
-| POST | `/api/tasks` | Create task | Yes |
-| PUT | `/api/tasks/:id` | Update task | Yes |
-
-## 🤝 Contributing
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request [web:9]
-
-## 📄 License
-
-This project is open source and available under the MIT License. [web:9]
-
-## 👥 Support
-
-- Found a bug? [Open an issue](https://github.com/yourusername/collaborative-task-manager/issues)
-- Need help? Join our [Discord community](https://discord.gg/your-discord)
 
 ---
 
-<div align="center">
+## 🌍 Environment Variables
 
-**Built with ❤️ for collaborative teams**  
-*Last updated: November 28, 2025*
+### **Backend `.env`**
 
-</div> [web:8][web:15]
 ```
+MONGO_URI=
+JWT_SECRET=
+PORT=5000
+```
+
+## ▶️ How to Run the Project
+
+1. Start MongoDB (Local or Atlas)
+2. Start Backend
+
+   ```bash
+   cd backend
+   npm run dev
+   ```
+3. Start Frontend
+
+   ```bash
+   cd frontend
+   npm run dev
+   ```
+4. Visit the app in browser:
+   **[http://localhost:5173](http://localhost:5173)**
+
+---
+
